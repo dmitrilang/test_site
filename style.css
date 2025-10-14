@@ -26,13 +26,26 @@ p {
 header {
   background-color: #065f46;
   color: #fff;
-  padding: 1.5rem 0;
+  padding: 1rem 0;
 }
 
 .header-container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.logo-block {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.logo {
+  height: 50px;
+  width: auto;
 }
 
 header h1 {
@@ -40,30 +53,33 @@ header h1 {
   font-weight: bold;
 }
 
-.btn-call {
-  background-color: #fff;
-  color: #065f46;
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  font-weight: 600;
+/* Навигация */
+header nav ul {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header nav ul li a {
+  color: #fff;
   text-decoration: none;
-  transition: background-color 0.3s;
+  font-weight: bold;
 }
 
-.btn-call:hover {
-  background-color: #f3f4f6;
+header nav ul li a:hover {
+  text-decoration: underline;
 }
 
-/* Адаптация для мобильных */
-@media (max-width: 600px) {
-  .header-container {
-    flex-direction: column;
-    gap: 0.75rem;
-  }
-  header h1 {
-    font-size: 1.25rem;
-    text-align: center;
-  }
+/* Гамбургер (скрыт на десктопе) */
+.menu-toggle {
+  display: none;
+  font-size: 1.5rem;
+  color: #fff;
+  background: none;
+  border: none;
+  cursor: pointer;
 }
 
 /* Hero */
@@ -157,6 +173,28 @@ header h1 {
   color: #4b5563;
 }
 
+/* Team */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  text-align: center;
+}
+
+.team-member img {
+  border-radius: 50%;
+  margin-bottom: 15px;
+  width: 150px;
+  height: 150px;
+}
+
+.container h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+  text-align: center;
+}
+
 /* Contact */
 .contact {
   background-color: #fff;
@@ -179,44 +217,6 @@ header h1 {
   text-decoration: underline;
 }
 
-.contact-form {
-  max-width: 500px;
-  margin: 2rem auto 0;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-}
-
-.contact-form input,
-.contact-form textarea {
-  padding: 0.75rem 1rem;
-  border: 1px solid #d1d5db;
-  border-radius: 0.5rem;
-  font-size: 1rem;
-  outline: none;
-}
-
-.contact-form input:focus,
-.contact-form textarea:focus {
-  border-color: #047857;
-  box-shadow: 0 0 0 2px rgba(4,120,87,0.3);
-}
-
-.contact-form button {
-  background-color: #047857;
-  color: #fff;
-  padding: 0.75rem 1.5rem;
-  border-radius: 0.5rem;
-  font-weight: 600;
-  border: none;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.contact-form button:hover {
-  background-color: #065f46;
-}
-
 /* Footer */
 footer {
   background-color: #065f46;
@@ -225,71 +225,59 @@ footer {
   text-align: center;
 }
 
+.logo_footer {
+  height: 50px;
+  margin-bottom: 0.5rem;
+}
+
 .footer-small {
   color: #d1d5db;
   font-size: 0.875rem;
-  align-items: center;
 }
 
-.logo-block {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem; /* Расстояние между логотипом и текстом */
-}
+/* Адаптив для мобильных */
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    align-items: center;
+  }
 
-.logo {
-  height: 70px; /* Можно изменить размер по необходимости */
-  width: auto;
-}
+  header nav {
+    width: 100%;
+  }
 
-.logo_footer {
-  height: 70px; /* Можно изменить размер по необходимости */
-  width: auto;100
-}
+  header nav ul {
+    flex-direction: column;
+    width: 100%;
+    display: none;
+    text-align: center;
+    gap: 0.5rem;
+  }
 
-section {
-  padding: 60px 0;
-}
+  header nav ul li {
+    margin: 0.5rem 0;
+  }
 
-/* Team */
-.team-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
-  text-align: center;
-}
+  header nav.active ul {
+    display: flex;
+  }
 
-.team-member img {
-  border-radius: 50%;
-  margin-bottom: 15px;
-}
+  .menu-toggle {
+    display: block;
+  }
 
-.container h2 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
-  text-align: center;
-}
+  .hero {
+    padding: 3rem 1rem;
+  }
 
-header nav ul {
-  display: flex;
-  justify-content: center;
-  list-style: none;
-  display: flex;
-    justify-content: center;
-    list-style: none;
-}
+  .hero h2 {
+    font-size: 2rem;
+  }
 
-header nav ul li {
-  margin: 0 15px;
-}
+  .hero p {
+    font-size: 1rem;
+  }
 
-header nav ul li a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-header nav ul li a:hover {
-  text-decoration: underline;
-}
-
+  .btn-hero {
+    width: 100%;
+    padding

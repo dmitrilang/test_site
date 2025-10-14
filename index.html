@@ -8,29 +8,31 @@
 </head>
 <body>
   <!-- Header -->
-<header>
-  <div class="container header-container">
-    <div class="logo-block">
-      <img src="images/logo.png" alt="Логотип Белашенко и партнёры" class="logo">
-      <h1>Белашенко и партнёры</h1>
+  <header>
+    <div class="container header-container">
+      <div class="logo-block">
+        <img src="images/logo.png" alt="Логотип Белашенко и партнёры" class="logo">
+        <h1>Белашенко и партнёры</h1>
+      </div>
+
+      <!-- Гамбургер для мобильных -->
+      <button class="menu-toggle">&#9776;</button>
+
+      <nav>
+        <ul>
+          <li><a href="#about">О нас</a></li>
+          <li><a href="#services">Услуги</a></li>
+          <li><a href="#team">Команда</a></li>
+          <li><a href="#contact">Контакты</a></li>
+        </ul>
+      </nav>
     </div>
-    <nav>
-      <ul>
-        <li><a href="#about">О нас</a></li>
-        <li><a href="#services">Услуги</a></li>
-        <li><a href="#team">Команда</a></li>
-        <li><a href="#contact">Контакты</a></li>
-      </ul>
-    </nav>
-  </div>
-
-</header>
-
+  </header>
 
   <!-- Hero -->
   <section class="hero">
     <h2>Центр банкротства и недвижимости</h2>
-    <p>Ваш путь к финансовой свободе и уверенности в будущем <br>Позвоните нам что бы записаться на консультацию</p>
+    <p>Ваш путь к финансовой свободе и уверенности в будущем <br>Позвоните нам, чтобы записаться на консультацию</p>
     <a href="tel:89058983377" class="btn-hero">Записаться на консультацию</a>
   </section>
 
@@ -67,6 +69,7 @@
     </div>
   </section>
 
+  <!-- Team -->
   <section id="team">
     <div class="container">
       <h2>Наша команда</h2>
@@ -90,7 +93,6 @@
     </div>
   </section>
 
-
   <!-- Contact -->
   <section id="contact" class="contact">
     <div class="container text-center">
@@ -101,7 +103,6 @@
       <p>ПН-ПТ с 10:00-17:00</p>
       <p>СБ-ВС по предварительной записи</p>
       <p>Адрес: г. Москва, ул. Юридическая, 10</p>
-
     </div>
   </section>
 
@@ -111,5 +112,15 @@
     <p>Белашенко и партнёры</p>
     <p class="footer-small">Юридическая защита и уверенность в каждом решении.</p>
   </footer>
+
+  <!-- Скрипт для гамбургера -->
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('header nav');
+
+    menuToggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
