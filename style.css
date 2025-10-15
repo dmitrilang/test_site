@@ -97,7 +97,7 @@ header nav ul li a:hover {
 
 .hero p {
   font-size: 1.2rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .btn-hero {
@@ -117,13 +117,13 @@ header nav ul li a:hover {
 /* About */
 .about {
   background-color: #fff;
-  padding: 4rem 0;
+  padding: 2rem 0;
   text-align: center;
 }
 
 .about h3 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .about p {
@@ -135,13 +135,13 @@ header nav ul li a:hover {
 /* Services */
 .services {
   background-color: #f3f4f6;
-  padding: 4rem 0;
+  padding: 2rem 0;
   text-align: center;
 }
 
 .services h3 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .services h3 other{
@@ -171,7 +171,7 @@ header nav ul li a:hover {
 }
 
 .service-card h4 {
-  font-size: 1.25rem;
+  font-size: 1.1rem;
   margin-bottom: 0.5rem;
 }
 
@@ -206,8 +206,8 @@ header nav ul li a:hover {
 }
 
 .container h2 {
-  font-size: 2rem;
-  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
   margin-top: 2rem;
   text-align: center;
 }
@@ -221,7 +221,7 @@ header nav ul li a:hover {
 }
 
 .contact h3 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin-bottom: 1rem;
 }
 
@@ -294,9 +294,9 @@ footer {
 
   .hero p {
     font-size: 1rem;
+    margin-bottom: 2rem;
   }
 
   .btn-hero {
     width: 100%;
-    padding
-
+  }
