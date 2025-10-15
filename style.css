@@ -10,7 +10,7 @@ body {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1rem;
+  padding: 0 rem;
 }
 
 h1, h2, h3, h4 {
@@ -35,7 +35,7 @@ header {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: 0rem;
 }
 
 .logo-block {
@@ -58,7 +58,6 @@ header h1 {
 header nav ul {
   display: flex;
   gap: 1.5rem;
-  list-style: none;
   margin: 0;
   padding: 0;
 }
@@ -76,7 +75,7 @@ header nav ul li a:hover {
 /* Гамбургер (скрыт на десктопе) */
 .menu-toggle {
   display: none;
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: #fff;
   background: none;
   border: none;
@@ -145,6 +144,12 @@ header nav ul li a:hover {
   margin-bottom: 2rem;
 }
 
+.services h3 other{
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
 .services-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -162,11 +167,16 @@ header nav ul li a:hover {
   padding: 1.5rem;
   border-radius: 1rem;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-  text-align: left;
+  text-align: center;
 }
 
 .service-card h4 {
   font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.container h5 {
+  font-size: 1rem;
   margin-bottom: 0.5rem;
 }
 
@@ -187,6 +197,12 @@ header nav ul li a:hover {
   margin-bottom: 15px;
   width: 150px;
   height: 150px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.team-member img:hover {
+  transform: scale(1.05);
 }
 
 .container h2 {
@@ -195,6 +211,7 @@ header nav ul li a:hover {
   margin-top: 2rem;
   text-align: center;
 }
+
 
 /* Contact */
 .contact {
@@ -239,7 +256,6 @@ footer {
 /* Адаптив для мобильных */
 @media (max-width: 768px) {
   .header-container {
-    flex-direction: column;
     align-items: center;
   }
 
@@ -251,7 +267,7 @@ footer {
     flex-direction: column;
     width: 100%;
     display: none;
-    text-align: center;
+    text-align: left;
     gap: 0.5rem;
   }
 
@@ -261,6 +277,7 @@ footer {
 
   header nav.active ul {
     display: flex;
+
   }
 
   .menu-toggle {
@@ -282,3 +299,4 @@ footer {
   .btn-hero {
     width: 100%;
     padding
+
